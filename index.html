@@ -24,19 +24,15 @@
     <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
     <link rel="stylesheet" href="assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
-
     <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
     <link rel="stylesheet" href="assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-
     <link rel="stylesheet" href="assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">
-
     <link rel="stylesheet" href="assets/css/my_style.css" />
     <!-- Page CSS -->
     
     <!-- Helpers -->
     <script src="assets/js/helpers.js"></script>
-
     <script src="assets/js/template-customizer.js"></script>
     <script src="assets/js/config.js"></script>
 
@@ -69,25 +65,135 @@
                     <li class="menu-item">
                         <a href="#" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            แดชบอร์ด
+                            หน้าหลัก
                         </a>
-                    </li>        
-                    <li class="menu-item">
+                    </li> 
+
+                    <li class="menu-item "> <!--ใส่ active ถ้าต้องการให้เน้นตัวหนา /ใส่ open ถ้าต้องการให้เมนูเลื่อนลงเป็นค่าเริ่มต้น-->
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-data"></i>
-                            ข้อมูลพื้นฐาน
+                            ระบบงานอำนวยการ
                         </a>
-                        <ul class="menu-sub"> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/maj_department/?mode=list" class="menu-link">หน่วยงานหลัก</a></li> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/nation_park_type/?mode=list" class="menu-link">ประเภทพื้นที่อนุรักษ์</a></li> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/nation_park/?mode=list" class="menu-link">รายชื่อพื้นที่อนุรักษ์</a></li> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/head_office/?mode=list" class="menu-link">รายชื่อสำนักบริหารพื้นที่อนุรักษ์</a></li> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/center_department/?mode=list" class="menu-link">รายชื่อหน่วยงาน/ศูนย์</a></li> <li class="menu-item "><a href="https://parkaccident.dnp.go.th/nprk_admin/pages/master/accident_type/?mode=list" class="menu-link">ประเภทอุบัติเหตุ</a></li></ul>
-                        </li>        <li class="menu-item  active open ">
+                        <ul class="menu-sub"> 
+                            <li class="menu-item "><a href="#" class="menu-link">ข้อมูลบุคลากร</a></li> 
+                            <li class="menu-item "><a href="#" class="menu-link">ข้อมูลครุภัณฑ์และสิ่งก่อสร้าง</a></li> 
+                        </ul>
+                    </li> 
+
+                    <li class="menu-item "> <!--ใส่ active ถ้าต้องการให้เน้นตัวหนา /ใส่ open ถ้าต้องการให้เมนูเลื่อนลงเป็นค่าเริ่มต้น-->
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-customize"></i>
-                            ข้อมูลนันทนาการและการท่องเที่ยว
+                            ระบบงานแผนงานอุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item"><a href="#" class="menu-link">การเกิดอุบัติเหตุ/ภัยพิบัติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">การเกิดอุบัติเหตุ/ภัยพิบัติ 2</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลงบประมาณ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแผนงานและโครงการ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลหน่วยพิทักษ์อุทยานแห่งชาติและจุดสกัด</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลการจัดเก็บเงินอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูล ACF (Activities Criteria Formats)</a></li>
                         </ul>
-                    </li>        
+                    </li>   
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานอนุรักษ์ทรัพยากร
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลคดี</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลจัดตั้ง ขยาย และเพิกถอนพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทั่วไปของวนอุทยาน</a></li>
+                        </ul>
+                    </li>  
+                    
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานจัดการทรัพยากร
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลการขออนุญาตดำเนินกิจการเพื่อการท่องเที่ยวที่เป็นประโยชน์หรือกิจการพิเศษในอุทยานแห่งชาติและวนอุทยาน</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลการขออนุญาตการถ่ายทำภาพยนตร์ วีดิทัศน์หรือสารคดี การถ่ายภาพ และการจัดกิจกรรมในพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
+                        </ul>
+                    </li>   
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานจัดการท่องเที่ยวและนันทนาการ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทั่วไปของอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งท่องเที่ยวอุทยานแห่งชาติและวนอุทยาน</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลบ้านพักอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข่าวกิจกรรมในอุทยานแห่งชาติ</a></li>
+                        </ul>
+                    </li>   
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานพัฒนาอุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแบบแปลนและสิ่งก่อสร้าง</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลปริมาณขยะในอุทยานแห่งชาติและวนอุทยาน</a></li>
+                        </ul>
+                    </li>  
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานวิจัยและพัฒนานวัตกรรมอุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแผนการบริหารจัดการพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลงานวิจัยในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทรัพยากรชีวภาพ (พันธุ์พืช/พันธุ์สัตว์)</a></li>
+                        </ul>
+                    </li> 
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานจัดการอุทยานแห่งชาติทางทะเล
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทรัพยากรธรรมชาติทางทะเล</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งดำน้ำในเขตอุทยานแห่งชาติทางทะเล</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งท่าเรือลอยน้ำ/ทุ่น</a></li>
+                        </ul>
+                    </li> 
+
+                    <li class="menu-item active open">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานกู้ภัยอุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item active"><a href="#" class="menu-link">ข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลลานจอดเฮลิคอปเตอร์ในอุทยานแห่งชาติ</a></li>
+                        </ul>
+                    </li> 
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิตินักท่องเที่ยว</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติยานพาหนะ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติจุดความร้อนในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติไฟป่าในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลช้างป่าในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลภารกิจการบินอากาศยานไร้คนขับ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลระบบ SMART PATROL (ที่เกี่ยวข้องกับปัจจัยคุกคาม)</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลติดตามพื้นที่บุกรุกในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข่าวประชาสัมพันธ์</a></li>
+                        </ul>
+                    </li> 
+
                     <li class="menu-item">
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-user"></i>
