@@ -5,7 +5,7 @@ const layoutMenuHTML = `
       <span class="app-brand-logo demo">
         <img src="/webDNP/assets/img/logo/logo-dnp.png" width="40" height="40">
       </span>
-      <span class="app-brand-text demo menu-text fw-bolder ms-2">ผู้ดูแลระบบ</span>
+      <span class="app-brand-text demo menu-text fw-bolder ms-2">ระบบงาน</span>
     </a>
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
       <i class="bx bx-chevron-left bx-sm align-middle"></i>
