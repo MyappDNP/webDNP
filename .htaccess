@@ -1,6 +1,0 @@
-# เปิดการใช้งาน Rewrite Engine
-RewriteEngine On
-
-# Rewriting old-page.html to load content from new-page.html
-RewriteRule ^home\.html$ 9-1.html [L]
-
