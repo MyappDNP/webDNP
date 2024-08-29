@@ -118,6 +118,35 @@ const layoutMenuHTML = `
       </ul>
     </li>
 
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานกู้ภัยอุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="9-1.html" class="menu-link">ข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลลานจอดเฮลิคอปเตอร์ในอุทยานแห่งชาติ</a></li>
+                        </ul>
+                    </li> 
+
+                    <li class="menu-item ">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิตินักท่องเที่ยว</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติยานพาหนะ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติจุดความร้อนในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติไฟป่าในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลช้างป่าในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลภารกิจการบินอากาศยานไร้คนขับ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลระบบ SMART PATROL (ที่เกี่ยวข้องกับปัจจัยคุกคาม)</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลติดตามพื้นที่บุกรุกในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">ข่าวประชาสัมพันธ์</a></li>
+                        </ul>
+                    </li> 
+
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-user"></i>
