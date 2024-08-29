@@ -4,10 +4,3 @@ RewriteEngine On
 # Rewriting old-page.html to load content from new-page.html
 RewriteRule ^home\.html$ 9-1.html [L]
 
-# เปลี่ยนเส้นทางจากโดเมนที่ไม่มี www ไปยังโดเมนที่มี www
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-
-# เปลี่ยนเส้นทางจากหน้าเพจปกติไปยังหน้า HTTPS (ปลอดภัย)
-RewriteCond %{HTTPS} off
-RewriteRule ^secure-page$ https://%{HTTP_HOST}/secure-page [R=301,L]
