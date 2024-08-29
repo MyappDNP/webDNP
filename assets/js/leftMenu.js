@@ -3,7 +3,7 @@ const layoutMenuHTML = `
   <div class="app-brand demo">
     <a href="#" class="app-brand-link">
       <span class="app-brand-logo demo">
-        <img src="/webDNP/assets/img/logo/logo-dnp.png" width="40" height="40">
+        <img src="/webDNP/assets/img/logo/logo-dnp.png" width="45" height="45">
       </span>
       <span class="app-brand-text demo menu-text fw-bolder ms-2">ระบบงาน</span>
     </a>
@@ -28,40 +28,40 @@ const layoutMenuHTML = `
         ระบบงานอำนวยการ
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="/webDNP/pages/01/01" class="menu-link">ข้อมูลบุคลากร</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/01/02" class="menu-link">ข้อมูลครุภัณฑ์และสิ่งก่อสร้าง</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/01/01" class="menu-link"><i class="menu-icon tf-icons bx bx-group"></i>ข้อมูลบุคลากร</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/01/02" class="menu-link"><i class="menu-icon tf-icons bx bx-building-house"></i> ข้อมูลครุภัณฑ์และสิ่งก่อสร้าง</a></li>
       </ul>
     </li>
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานแผนงานอุทยานแห่งชาติ
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="/webDNP/pages/02/01" class="menu-link">ข้อมูลงบประมาณ</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/02/02" class="menu-link">ข้อมูลแผนงานและโครงการ</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/02/03" class="menu-link">ข้อมูลหน่วยพิทักษ์อุทยานแห่งชาติและจุดสกัด</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/02/04" class="menu-link">ข้อมูลการจัดเก็บเงินอุทยานแห่งชาติ</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/02/05" class="menu-link">ข้อมูล ACF (Activities Criteria Formats)</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/02/01" class="menu-link"><i class="menu-icon tf-icons bx bx-money-withdraw"></i>ข้อมูลงบประมาณ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/02/02" class="menu-link"><i class="menu-icon tf-icons bx bx-notepad"></i>ข้อมูลแผนงานและโครงการ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/02/03" class="menu-link"><i class="menu-icon tf-icons bx bx-map-pin"></i>ข้อมูลหน่วยพิทักษ์อุทยานแห่งชาติและจุดสกัด</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/02/04" class="menu-link"><i class="menu-icon tf-icons bx bx-archive-in"></i>ข้อมูลการจัดเก็บเงินอุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/02/05" class="menu-link"><i class="menu-icon tf-icons bx bx-food-menu"></i>ข้อมูล ACF (Activities Criteria Formats)</a></li>
       </ul>
     </li>
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานอนุรักษ์ทรัพยากร
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="/webDNP/pages/03/01" class="menu-link">ข้อมูลคดี</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/03/02" class="menu-link">ข้อมูลจัดตั้ง ขยาย และเพิกถอนพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/03/01" class="menu-link"><i class="menu-icon tf-icons bx bx-shield-alt"></i>ข้อมูลคดี</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/03/02" class="menu-link"><i class="menu-icon tf-icons bx bx-book-reader"></i>ข้อมูลจัดตั้ง ขยาย และเพิกถอนพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
         <li class="menu-item"><a href="/webDNP/pages/03/03" class="menu-link">ข้อมูลทั่วไปของวนอุทยาน</a></li>
       </ul>
     </li>
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานจัดการทรัพยากร
       </a>
       <ul class="menu-sub">
@@ -72,7 +72,7 @@ const layoutMenuHTML = `
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานจัดการท่องเที่ยวและนันทนาการ
       </a>
       <ul class="menu-sub">
@@ -85,7 +85,7 @@ const layoutMenuHTML = `
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานพัฒนาอุทยานแห่งชาติ
       </a>
       <ul class="menu-sub">
@@ -96,7 +96,7 @@ const layoutMenuHTML = `
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานวิจัยและพัฒนานวัตกรรมอุทยานแห่งชาติ
       </a>
       <ul class="menu-sub">
@@ -108,7 +108,7 @@ const layoutMenuHTML = `
 
     <li class="menu-item">
       <a href="#" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-customize"></i>
+        <i class="menu-icon tf-icons bx bx-data"></i>
         ระบบงานจัดการอุทยานแห่งชาติทางทะเล
       </a>
       <ul class="menu-sub">
@@ -120,7 +120,7 @@ const layoutMenuHTML = `
 
                     <li class="menu-item">
                         <a href="#" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            <i class="menu-icon tf-icons bx bx-data"></i>
                             ระบบงานกู้ภัยอุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
@@ -131,7 +131,7 @@ const layoutMenuHTML = `
 
                     <li class="menu-item ">
                         <a href="#" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-customize"></i>
+                            <i class="menu-icon tf-icons bx bx-data"></i>
                             ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
