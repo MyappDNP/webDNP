@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+</head>
+<body>
+    <h1>Data Entry Form</h1>
+    <form action="save_data.php" method="POST">
+        <label for="bio_code">Bio Code:</label>
+        <input type="text" id="bio_code" name="bio_code" required><br><br>
+        
+        <label for="sci_name_e">Scientific Name (English):</label>
+        <input type="text" id="sci_name_e" name="sci_name_e" required><br><br>
+        
+        <label for="com_name_t">Common Name (Thai):</label>
+        <input type="text" id="com_name_t" name="com_name_t" required><br><br>
+        
+        <label for="com_name_e">Common Name (English):</label>
+        <input type="text" id="com_name_e" name="com_name_e" required><br><br>
+        
+        <label for="phylum">Phylum:</label>
+        <input type="text" id="phylum" name="phylum" required><br><br>
+        
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required><br><br>
+        
+        <label for="mbio_des_t">Description (Thai):</label>
+        <textarea id="mbio_des_t" name="mbio_des_t" required></textarea><br><br>
+        
+        <label for="mbio_des_e">Description (English):</label>
+        <textarea id="mbio_des_e" name="mbio_des_e" required></textarea><br><br>
+        
+        <label for="ord_n_t">Order Name (Thai):</label>
+        <input type="text" id="ord_n_t" name="ord_n_t" required><br><br>
+        
+        <label for="ord_n_e">Order Name (English):</label>
+        <input type="text" id="ord_n_e" name="ord_n_e" required><br><br>
+        
+        <label for="fam_n_t">Family Name (Thai):</label>
+        <input type="text" id="fam_n_t" name="fam_n_t" required><br><br>
+        
+        <label for="fam_n_e">Family Name (English):</label>
+        <input type="text" id="fam_n_e" name="fam_n_e" required><br><br>
+        
+        <label for="spcies1">Species:</label>
+        <input type="text" id="spcies1" name="spcies1" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

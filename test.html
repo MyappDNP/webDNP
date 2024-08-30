@@ -24,9 +24,8 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Bi Code</th>
+                <th>Bio Code</th>
                 <th>Scientific Name (English)</th>
-                <th>Scientific Name (Thai)</th>
                 <th>Common Name (Thai)</th>
                 <th>Common Name (English)</th>
                 <th>Phylum</th>
@@ -59,10 +58,9 @@
                         const tr = document.createElement('tr');
                         tr.innerHTML = `
                             <td>${row.id}</td>
-                            <td>${row.bi_code}</td>
+                            <td>${row.bio_code}</td>
                             <td>${row.sci_name_e}</td>
-                            <td>${row.sci_name_th}</td>
-                            <td>${row.com_name_th}</td>
+                            <td>${row.com_name_t}</td>
                             <td>${row.com_name_e}</td>
                             <td>${row.phylum}</td>
                             <td>${row.class}</td>
@@ -72,7 +70,7 @@
                             <td>${row.ord_n_e}</td>
                             <td>${row.fam_n_t}</td>
                             <td>${row.fam_n_e}</td>
-                            <td>${row.spcies}</td>
+                            <td>${row.spcies1}</td>
                         `;
                         tableBody.appendChild(tr);
                     });
