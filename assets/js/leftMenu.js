@@ -55,7 +55,7 @@ const layoutMenuHTML = `
       <ul class="menu-sub">
         <li class="menu-item"><a href="/webDNP/pages/03/01" class="menu-link"><i class="menu-icon tf-icons bx bx-shield-alt"></i>ข้อมูลคดี</a></li>
         <li class="menu-item"><a href="/webDNP/pages/03/02" class="menu-link"><i class="menu-icon tf-icons bx bx-book-reader"></i>ข้อมูลจัดตั้ง ขยาย และเพิกถอนพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/03/03" class="menu-link">ข้อมูลทั่วไปของวนอุทยาน</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/03/03" class="menu-link"><i class="menu-icon tf-icons bx bx-leaf"></i>ข้อมูลทั่วไปของวนอุทยาน</a></li>
       </ul>
     </li>
 
@@ -65,8 +65,8 @@ const layoutMenuHTML = `
         ระบบงานจัดการทรัพยากร
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="/webDNP/pages/04/01" class="menu-link">ข้อมูลการขออนุญาตดำเนินกิจการเพื่อการท่องเที่ยวที่เป็นประโยชน์หรือกิจการพิเศษในอุทยานแห่งชาติและวนอุทยาน</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/04/02" class="menu-link">ข้อมูลการขออนุญาตการถ่ายทำภาพยนตร์ วีดิทัศน์หรือสารคดี การถ่ายภาพ และการจัดกิจกรรมในพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/04/01" class="menu-link"><i class="menu-icon tf-icons bx bx-landscape"></i>ข้อมูลการขออนุญาตดำเนินกิจการเพื่อการท่องเที่ยวที่เป็นประโยชน์หรือกิจการพิเศษในอุทยานแห่งชาติและวนอุทยาน</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/04/02" class="menu-link"><i class="menu-icon tf-icons bx bx-video-recording"></i>ข้อมูลการขออนุญาตการถ่ายทำภาพยนตร์ วีดิทัศน์หรือสารคดี การถ่ายภาพ และการจัดกิจกรรมในพื้นที่อุทยานแห่งชาติและวนอุทยาน</a></li>
       </ul>
     </li>
 
@@ -76,10 +76,10 @@ const layoutMenuHTML = `
         ระบบงานจัดการท่องเที่ยวและนันทนาการ
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="/webDNP/pages/05/01" class="menu-link">ข้อมูลทั่วไปของอุทยานแห่งชาติ</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/05/02" class="menu-link">ข้อมูลแหล่งท่องเที่ยวอุทยานแห่งชาติและวนอุทยาน</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/05/03" class="menu-link">ข้อมูลบ้านพักอุทยานแห่งชาติ</a></li>
-        <li class="menu-item"><a href="/webDNP/pages/05/04" class="menu-link">ข่าวกิจกรรมในอุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/05/01" class="menu-link"><i class="menu-icon tf-icons bx bxs-tree"></i>ข้อมูลทั่วไปของอุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/05/02" class="menu-link"><i class="menu-icon tf-icons bx bxs-landscape"></i>ข้อมูลแหล่งท่องเที่ยวอุทยานแห่งชาติและวนอุทยาน</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/05/03" class="menu-link"><i class="menu-icon tf-icons bx bx-home"></i>ข้อมูลบ้านพักอุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="/webDNP/pages/05/04" class="menu-link"><i class="menu-icon tf-icons bx bxs-megaphone"></i>ข่าวกิจกรรมในอุทยานแห่งชาติ</a></li>
       </ul>
     </li>
 
@@ -89,8 +89,8 @@ const layoutMenuHTML = `
         ระบบงานพัฒนาอุทยานแห่งชาติ
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแบบแปลนและสิ่งก่อสร้าง</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลปริมาณขยะในอุทยานแห่งชาติและวนอุทยาน</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-book-content"></i>ข้อมูลแบบแปลนและสิ่งก่อสร้าง</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-trash"></i>ข้อมูลปริมาณขยะในอุทยานแห่งชาติและวนอุทยาน</a></li>
       </ul>
     </li>
 
@@ -100,9 +100,9 @@ const layoutMenuHTML = `
         ระบบงานวิจัยและพัฒนานวัตกรรมอุทยานแห่งชาติ
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแผนการบริหารจัดการพื้นที่อุทยานแห่งชาติ</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลงานวิจัยในอุทยานแห่งชาติ</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทรัพยากรชีวภาพ (พันธุ์พืช/พันธุ์สัตว์)</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-detail"></i>ข้อมูลแผนการบริหารจัดการพื้นที่อุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-file-blank"></i>ข้อมูลงานวิจัยในอุทยานแห่งชาติ</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-florist"></i>ข้อมูลทรัพยากรชีวภาพ (พันธุ์พืช/พันธุ์สัตว์)</a></li>
       </ul>
     </li>
 
@@ -112,8 +112,8 @@ const layoutMenuHTML = `
         ระบบงานจัดการอุทยานแห่งชาติทางทะเล
       </a>
       <ul class="menu-sub">
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลทรัพยากรธรรมชาติทางทะเล</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งดำน้ำในเขตอุทยานแห่งชาติทางทะเล</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-ship"></i>ข้อมูลทรัพยากรธรรมชาติทางทะเล</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-swim"></i>ข้อมูลแหล่งดำน้ำในเขตอุทยานแห่งชาติทางทะเล</a></li>
         <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งท่าเรือลอยน้ำ/ทุ่น</a></li>
       </ul>
     </li>
