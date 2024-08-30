@@ -129,7 +129,7 @@ const layoutMenuHTML = `
                         </ul>
                     </li> 
 
-                    <li class="menu-item active open">
+                    <li class="menu-item">
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-data"></i>
                             ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
@@ -174,3 +174,17 @@ const layoutMenuHTML = `
 
 // Append the menu to the desired container in your HTML
 document.getElementById('leftMenu').innerHTML = layoutMenuHTML;
+
+// เพิ่ม event listener ให้กับลิงก์ทั้งหมดในเมนู
+const menuLinks = document.querySelectorAll('#layout-menu .menu-link');
+menuLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // ลบคลาส 'active' ออกจากรายการเมนูทั้งหมด
+    document.querySelectorAll('#layout-menu .menu-item').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // เพิ่มคลาส 'active' ให้กับรายการเมนูที่ถูกคลิก
+    this.closest('.menu-item').classList.add('active');
+  });
+});
