@@ -114,7 +114,7 @@ const layoutMenuHTML = `
       <ul class="menu-sub">
         <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-ship"></i>ข้อมูลทรัพยากรธรรมชาติทางทะเล</a></li>
         <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-swim"></i>ข้อมูลแหล่งดำน้ำในเขตอุทยานแห่งชาติทางทะเล</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">ข้อมูลแหล่งท่าเรือลอยน้ำ/ทุ่น</a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-water"></i>ข้อมูลแหล่งท่าเรือลอยน้ำ/ทุ่น</a></li>
       </ul>
     </li>
 
@@ -124,26 +124,26 @@ const layoutMenuHTML = `
                             ระบบงานกู้ภัยอุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item"><a href="9-1.html" class="menu-link">ข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลลานจอดเฮลิคอปเตอร์ในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="9-1.html" class="menu-link"><i class="menu-icon tf-icons bx bxs-car-crash"></i>ข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-cross"></i>ข้อมูลลานจอดเฮลิคอปเตอร์ในอุทยานแห่งชาติ</a></li>
                         </ul>
                     </li> 
 
-                    <li class="menu-item ">
+                    <li class="menu-item active open">
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-data"></i>
                             ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิตินักท่องเที่ยว</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติยานพาหนะ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติจุดความร้อนในพื้นที่อุทยานแห่งชาติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลสถิติไฟป่าในพื้นที่อุทยานแห่งชาติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลช้างป่าในอุทยานแห่งชาติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลภารกิจการบินอากาศยานไร้คนขับ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลระบบ SMART PATROL (ที่เกี่ยวข้องกับปัจจัยคุกคาม)</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข้อมูลติดตามพื้นที่บุกรุกในอุทยานแห่งชาติ</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">ข่าวประชาสัมพันธ์</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-bar-chart-square"></i>ข้อมูลสถิตินักท่องเที่ยว</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-bus-school"></i>ข้อมูลสถิติยานพาหนะ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-braille"></i>ข้อมูลสถิติจุดความร้อนในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-flame"></i>ข้อมูลสถิติไฟป่าในพื้นที่อุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-binoculars"></i>ข้อมูลช้างป่าในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-plane-take-off"></i>ข้อมูลภารกิจการบินอากาศยานไร้คนขับ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-walk"></i>ข้อมูลระบบ SMART PATROL (ที่เกี่ยวข้องกับปัจจัยคุกคาม)</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-no-entry"></i>ข้อมูลติดตามพื้นที่บุกรุกในอุทยานแห่งชาติ</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-megaphone"></i>ข่าวประชาสัมพันธ์</a></li>
                         </ul>
                     </li> 
 
