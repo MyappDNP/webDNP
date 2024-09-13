@@ -90,87 +90,140 @@
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
             <h6 class="fw-bold">
-<span class="text-muted fw-light">ข้อมูลครุภัณฑ์คอมพิวเตอร์ /</span> ข้อมูลทั้งหมด</h6>
+<span class="text-muted fw-light">ข้อมูลครุภัณฑ์คอมพิวเตอร์ /</span> เพิ่มข้อมูล</h6>
 
 <div class="card">
-    <div class="card-datatable table-responsive">
-      <div class="dataTables_wrapper dt-bootstrap5 no-footer">
-        <div class="row ms-2 me-3">
-          <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
-            <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
-              <div class="dt-buttons">
-                <a class="dt-button btn btn-primary" href="add.html">
-                  <i class="bx bx-plus me-md-2"></i>
-                  <span class="d-md-inline-block d-none">เพิ่มข้อมูล</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-8 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2">
-            <div class="dataTables_filter">
-              <input type="search" class="form-control search" placeholder="ค้นหา..." value="">
-              <input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">
-              <button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>
-              <a href="?mode=list" class="btn btn-outline-primary">ยกเลิก</a>
-  
-            </div>
-          </div>
+<div class="card-header d-flex align-items-center justify-content-between">
+<h5 class="mb-0">เพิ่มข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</h5>
+</div>
+<!-- <hr class="my-0 mx-0" /> -->
+<div class="card-body">
+        <form method="POST" id="form_risk_report" enctype="multipart/form-data">
+    <div class="row">
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
+            <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+                <option value="">-- เลือกหน่วยงาน --</option>
+                <option value="1090" >อุทยานแห่งชาติ กุยบุรี</option><option value="9111" >อุทยานแห่งชาติ ขุนขาน</option>
+            </select>
         </div>
-                <table id="data-table" class="table border-top dataTable no-footer dtr-column table-sm  table-hover">
-            <thead>
-              <tr>
-                <!--<th class="cell-fit">&nbsp;</th>-->
-                <th class="cell-fit">ลำดับ</th>
-                <th>สำนักบริหารพื้นที่อนุรักษ์</th>
-                <th>ประเภท</th>
-                <th>อุทยานแห่งชาติ/วนอุทยาน</th>
-                <th>ประเภทครุภัณฑ์คอมพิวเตอร์</th>
-                <th>ปี พ.ศ.</th>
-                <th>หมายเลขครุภัณฑ์</th>
-                <th>ยี่ห้อ</th>
-                <th>CPU</th>
-                <th>ลักษณะการใช้งาน</th>
-                <th>สถานะ</th>
-              </tr>
-            </thead>
+        <div></div>
 
-            <tbody>
-                <!-- Data will be loaded here -->
-            </tbody>
-    </table>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">วันที่เกิดอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
+            <div class="input-group input-group-merge">
+                <input class="form-control date" autocomplete="off" onkeypress="return false;" onkeyup="return false;" onkeydown="return false;" type="text" id="txt_riskreportdate" name="txt_riskreportdate" placeholder="วันที่เกิดอุบัติเหตุ/ภัยพิบัติ" value="">
+                <span class="input-group-text cursor-pointer" onclick="document.getElementById('txt_riskreportdate').focus();"><i class="bx bx-calendar"></i></span>
+            </div>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">สถานที่เกิดอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
+            <input class="form-control" type="text" id="txt_riskreportplace" name="txt_riskreportplace" placeholder="สถานที่เกิดอุบัติเหตุ/ภัยพิบัติ" value="" />
+        </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/webDNP/pages/10/01/1001.php')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const tableBody = document.querySelector('#data-table tbody');
-                    data.forEach(row => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${row.id}</td>
-                            <td>${row.head}</td>
-                            <td>${row.type_np}</td>
-                            <td>${row.park}</td>
-                            <td>${row.type_com}</td>
-                            <td>${row.year_np}</td>
-                            <td>${row.np_id}</td>
-                            <td>${row.brand_id}</td>
-                            <td>${row.cpu_id}</td>
-                            <td>${row.purpose}</td>
-                            <td>${row.status_np}</td>
-                        `;
-                        tableBody.appendChild(tr);
-                    });
-                })
-                .catch(error => console.error('Error:', error));
-        });
-    </script>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">พิกัด Latitude</label>
+            <input class="form-control" type="text" id="txt_x" name="txt_x" placeholder="พิกัด ละติจูด เหนือ" value="0" />
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">พิกัด Longitude</label>
+            <input class="form-control" type="text" id="txt_y" name="txt_y" placeholder="พิกัด ลองจิจูด ตะวันออก" value="0" />
+        </div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ประเภทของอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
+            <select id="ddl_accidenttypeid" name="ddl_accidenttypeid" class="select2 form-select">
+                <option value="">-- เลือกประเภทของอุบัติเหตุ/ภัยพิบัติ --</option>
+                <option value="01" >พาหนะทางบก</option><option value="02" >พาหนะทางน้ำ</option><option value="03" >สัตว์</option><option value="04" >ตกจากที่สูง</option><option value="05" >จมน้ำ</option><option value="06" >อื่นๆ</option>                        </select>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ความเกี่ยวพันกับเครื่องดื่มแอลกอฮอล์<small class="text-danger ms-1">*</small></label>
+            <!-- <div class="col">ไม่เกี่ยวพัน</div> -->
+            <div class="col-md">
+                <div class="form-check form-check-inline mt-3">
+                    <input class="form-check-input" type="radio" name="rdo_riskreportalgohol" id="rdo_riskreportalgohol1" value="y"  />
+                    <label class="form-check-label" for="rdo_riskreportalgohol1">เกี่ยวพัน</label>
+                </div>
+                <div class="form-check form-check-inline mt-3">
+                    <input class="form-check-input" type="radio" name="rdo_riskreportalgohol" id="rdo_riskreportalgohol2" value="n"  />
+                    <label class="form-check-label" for="rdo_riskreportalgohol2">ไม่เกี่ยวพัน</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">จำนวนผู้บาดเจ็บเล็กน้อย</label>
+            <div class="input-group input-group-merge">
+                <input type="text" class="form-control" id="txt_riskreportinjureminor" name="txt_riskreportinjureminor" placeholder="จำนวนผู้บาดเจ็บเล็กน้อย" value="0" />
+                <span class="input-group-text">คน</span>
+            </div>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">จำนวนผู้บาดเจ็บสาหัส</label>
+            <div class="input-group input-group-merge">
+                <input type="text" class="form-control" id="txt_riskreportinjurebad" name="txt_riskreportinjurebad" placeholder="จำนวนผู้บาดเจ็บสาหัส" value="0" />
+                <span class="input-group-text">คน</span>
+            </div>
+        </div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">จำนวนผู้เสียชีวิต</label>
+            <div class="input-group input-group-merge">
+                <input type="text" class="form-control" id="txt_riskreportdeath" name="txt_riskreportdeath" placeholder="จำนวนผู้เสียชีวิต" value="0" />
+                <span class="input-group-text">คน</span>
+            </div>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">มูลค่าทรัพย์สินเสียหาย</label>
+            <div class="input-group input-group-merge">
+                <input type="text" class="form-control" id="txt_riskreportcost" name="txt_riskreportcost" placeholder="มูลค่าทรัพย์สินเสียหาย" value="0" />
+                <span class="input-group-text">บาท</span>
+            </div>
+        </div>
+
+        <div class="mb-3 col-md-12">
+            <label class="fw-bold">รายละเอียด<small class="text-danger ms-1">*</small></label>
+            <textarea class="form-control" rows="10" id="txt_riskreportdesc" name="txt_riskreportdesc" placeholder="รายละเอียด"></textarea>
+        </div>
+
+        <div class="mb-3 col-md-12">
+            <label class="fw-bold">ความเสียหาย</label>
+            <textarea class="form-control" rows="10" id="txt_riskreportdamage" name="txt_riskreportdamage" placeholder="ความเสียหาย"></textarea>
+        </div>
+
+        <div class="mb-3 col-md-12">
+            <label class="fw-bold">การดำเนินการของเจ้าหน้าที่</label>
+            <textarea class="form-control" rows="10" id="txt_riskreportmanage" name="txt_riskreportmanage" placeholder="การดำเนินการของเจ้าหน้าที่"></textarea>
+        </div>
+
+        <div class="mb-3 col-md-12">
+            <label class="fw-bold">ภาพการเกิดอุบัติเหตุ/ภัยพิบัติ</label>
+            <div class="col mb-2">
+                <button type="button" class="btn btn-primary" id="btn_risk_pic_add">
+                    <span class="tf-icons bx bx-image-add"></span>&nbsp; เพิ่มรูปภาพ
+                </button>
+                <div id="row_error_risk_pic_add" class="fv-plugins-message-container border border-danger p-1 invalid-feedback clearfix" hidden="true">
+                    <span id="lbl_error_risk_pic_add"></span> <button type="button" class="btn btn-xs btn btn-danger float-end" onclick="$('#row_error_risk_pic_add').attr('hidden','hidden');">ปิด</button>
+                </div>
+            </div>
+
+
+            <div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0">
+                                        </div>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ผู้แจ้งและเบอร์ติดต่อ<small class="text-danger ms-1">*</small></label>
+            <input class="form-control" type="text" id="txt_riskreportperson" name="txt_riskreportperson" placeholder="ผู้รายงานและเบอร์ติดต่อ" value="" />
+        </div>
+
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md">
+            <input type="submit" class="btn btn-primary me-sm-2 me-1" name="btn_save" value="บันทึก">
+            <a class="btn btn-label-secondary" href="?mode=list">ย้อนกลับ</a>
+        </div>
+    </div>
 
     <input type="hidden" name="hid_delete_pic" id="hid_delete_pic">
 </form>
