@@ -94,7 +94,7 @@
 
 <div class="card">
 <div class="card-header d-flex align-items-center justify-content-between">
-<h5 class="mb-0">เพิ่มข้อมูลการเกิดอุบัติเหตุ/ภัยพิบัติในอุทยานแห่งชาติ</h5>
+<h5 class="mb-0">เพิ่มข้อมูลครุภัณฑ์คอมพิวเตอร์</h5>
 </div>
 <!-- <hr class="my-0 mx-0" /> -->
 <div class="card-body">
@@ -104,7 +104,8 @@
             <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
             <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
                 <option value="">-- เลือกหน่วยงาน --</option>
-                <option value="1090" >อุทยานแห่งชาติ กุยบุรี</option><option value="9111" >อุทยานแห่งชาติ ขุนขาน</option>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_park.php'; ?>
+
             </select>
         </div>
         <div></div>
