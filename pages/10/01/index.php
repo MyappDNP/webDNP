@@ -99,7 +99,7 @@
           <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
             <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
               <div class="dt-buttons">
-                <a class="dt-button btn btn-primary" href="add.html">
+                <a class="dt-button btn btn-primary" href="add.php">
                   <i class="bx bx-plus me-md-2"></i>
                   <span class="d-md-inline-block d-none">เพิ่มข้อมูล</span>
                 </a>
@@ -108,18 +108,16 @@
           </div>
           <div class="col-12 col-md-8 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2">
             <div class="dataTables_filter">
-              <input type="search" class="form-control search" placeholder="ค้นหา..." value="">
+              <input type="search" class="form-control search" placeholder="ค้นหา..." value="" id="search_input">
               <input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">
               <button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>
-              <a href="?mode=list" class="btn btn-outline-primary">ยกเลิก</a>
-  
+              <a href="index.php" class="btn btn-outline-primary">ยกเลิก</a>
             </div>
           </div>
-        </div>
-                <table id="data-table" class="table border-top dataTable no-footer dtr-column table-sm  table-hover">
+          
+          <table id="data-table" class="table border-top dataTable no-footer dtr-column table-sm table-hover">
             <thead>
               <tr>
-                <!--<th class="cell-fit">&nbsp;</th>-->
                 <th class="cell-fit">ลำดับ</th>
                 <th>สำนักบริหารพื้นที่อนุรักษ์</th>
                 <th>ประเภท</th>
@@ -133,11 +131,11 @@
                 <th>สถานะ</th>
               </tr>
             </thead>
-
             <tbody>
-                <!-- Data will be loaded here -->
+              <!-- Data will be loaded here -->
             </tbody>
-    </table>
+          </table>
+          
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -300,23 +298,24 @@
     <script src="/webDNP/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
-
     <script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>
     <script src="/webDNP/assets/js/datepicker_config.js"></script>
     <!-- Main JS -->
     <script src="/webDNP/assets/js/main.js"></script>
-
     <!-- Page JS -->
     <script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>
+    <script src="/webDNP/pages/10/01/search.js"></script>
 
 
 
 <!--ช่องค้นหาใน รายชื่อต่างๆ-->
+
+
 <script>
     function url_search(){
         var search = $('.search').val();
         var date_search = $('.date_search').val();
-        var url =  "?mode=list";
+        var url =  "index.php";
 
         if(search !="" && search != undefined) url = url+ "&search=" + encodeURIComponent(search);
         if(date_search !="" && date_search != undefined) url = url + "&date=" + encodeURIComponent(date_search);
