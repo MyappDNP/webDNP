@@ -108,9 +108,10 @@
           </div>
           <div class="col-12 col-md-8 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2">
             <div class="dataTables_filter">
-              <input type="search" class="form-control search" placeholder="ค้นหา..." value="" id="search_input">
-              <input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">
-              <button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>
+            <input type="search" class="form-control search" placeholder="ค้นหา..." value="" id="search_input">
+            <input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">
+            <button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>
+
               <a href="index.php" class="btn btn-outline-primary">ยกเลิก</a>
             </div>
           </div>
@@ -312,49 +313,50 @@
 
 
 <script>
-    function url_search(){
-        var search = $('.search').val();
-        var date_search = $('.date_search').val();
-        var url =  "index.php";
+function url_search(){
+    var search = document.querySelector('.search').value;
+    var date_search = document.querySelector('.date_search').value;
+    var url = "/webDNP/pages/10/01/1001.php";
 
-        if(search !="" && search != undefined) url = url+ "&search=" + encodeURIComponent(search);
-        if(date_search !="" && date_search != undefined) url = url + "&date=" + encodeURIComponent(date_search);
+    if(search != "" && search != undefined) url += "?search=" + encodeURIComponent(search);
+    if(date_search != "" && date_search != undefined) url += (search ? "&" : "?") + "date=" + encodeURIComponent(date_search);
 
-        return url;
-    }
+    return url;
+}
 
-    $(function() {
-        $('input[type=search]').keydown(function (event) {
-            if (event.which == 13) {
-                window.location = url_search();
-                event.preventDefault();
-            }
-        });
-
-        var e = $(".select2");
-        e.length && e.each(function() {
-            var e = $(this);
-            e.wrap('<div class="position-relative"></div>'), e.select2({
-                dropdownParent: e.parent()
-            })
-        });
+$(function() {
+    $('input[type=search]').keydown(function (event) {
+        if (event.which == 13) {
+            window.location = url_search();
+            event.preventDefault();
+        }
     });
 
-    function modal_delete(id) {
-        $("#modalDelete").modal('show');
-        $("#modalDelete #btn_ok").click(function () {
-            $("#form_delete #hid_id_delete").val(id);
-            $("#modalDelete").modal('hide');
-            $("#form_delete").submit();
-        });
-    }
+    var e = $(".select2");
+    e.length && e.each(function() {
+        var e = $(this);
+        e.wrap('<div class="position-relative"></div>'), e.select2({
+            dropdownParent: e.parent()
+        })
+    });
+});
 
-    function modal_alert(title,text){
-        $("#modalAlert #modalTitle").html(title);
-        $("#modalAlert #modalText").html(text);
-        $("#modalAlert").modal('show');
-    }
+function modal_delete(id) {
+    $("#modalDelete").modal('show');
+    $("#modalDelete #btn_ok").click(function () {
+        $("#form_delete #hid_id_delete").val(id);
+        $("#modalDelete").modal('hide');
+        $("#form_delete").submit();
+    });
+}
+
+function modal_alert(title,text){
+    $("#modalAlert #modalTitle").html(title);
+    $("#modalAlert #modalText").html(text);
+    $("#modalAlert").modal('show');
+}
 </script>
+
 
 </body>
 

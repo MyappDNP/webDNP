@@ -19,20 +19,33 @@ if ($conn->connect_error) {
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 $date = isset($_GET['date']) ? $_GET['date'] : '';
 
-// เขียนคำสั่ง SQL เพื่อดึงข้อมูลจากตาราง และกรองตามค่าที่ค้นหา
+// เขียนคำสั่ง SQL โดยใช้ Prepared Statements
 $sql = "SELECT id, head, type_np, park, type_com, year_np, np_id, brand_id, cpu_id, purpose, status_np FROM computertable WHERE 1=1";
 
-// เพิ่มเงื่อนไขการค้นหาตามคำค้นหาที่กรอก
+// ตรวจสอบเงื่อนไขการค้นหาและเพิ่มเงื่อนไขใน SQL
 if (!empty($search)) {
-    $sql .= " AND (head LIKE '%$search%' OR park LIKE '%$search%' OR type_np LIKE '%$search%')";
+    $sql .= " AND (head LIKE ? OR park LIKE ? OR type_np LIKE ?)";
 }
-
-// เพิ่มเงื่อนไขการค้นหาตามวันที่ที่กรอก
 if (!empty($date)) {
-    $sql .= " AND year_np = '$date'"; // สมมติว่า `year_np` เป็นปีที่ต้องการค้นหา
+    $sql .= " AND year_np = ?";
 }
 
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+
+// ตรวจสอบและผูกค่าพารามิเตอร์
+if (!empty($search) && !empty($date)) {
+    $searchParam = "%$search%";
+    $stmt->bind_param('ssss', $searchParam, $searchParam, $searchParam, $date);
+} elseif (!empty($search)) {
+    $searchParam = "%$search%";
+    $stmt->bind_param('sss', $searchParam, $searchParam, $searchParam);
+} elseif (!empty($date)) {
+    $stmt->bind_param('s', $date);
+}
+
+// รันคำสั่ง SQL
+$stmt->execute();
+$result = $stmt->get_result();
 
 // สร้างอาร์เรย์เพื่อเก็บข้อมูล
 $data = array();
@@ -46,5 +59,6 @@ if ($result->num_rows > 0) {
 echo json_encode($data);
 
 // ปิดการเชื่อมต่อฐานข้อมูล
+$stmt->close();
 $conn->close();
 ?>
