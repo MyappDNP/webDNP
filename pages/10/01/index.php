@@ -3,7 +3,6 @@
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-footer-fixed" dir="ltr" data-theme="theme-bordered" data-assets-path="/webDNP/assets/" data-template="vertical-menu-template">
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -15,12 +14,9 @@
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/flag-icons.css" />
 
-    <!-- Core CSS -->
     <link rel="stylesheet" href="/webDNP/assets/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" type="text/css" href="/webDNP/assets/css/theme-bordered.css" class="template-customizer-theme-css">
     <link rel="stylesheet" href="/webDNP/assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/select2/select2.css" />
@@ -41,21 +37,16 @@
     
 </head>
 <body>
-
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
-            <!-- Left Menu -->
-            <!-- Menu -->
         <div id="leftMenu"></div>
         <script src="/webDNP/assets/js/leftMenu.js"></script>
-            
-<!-- / Menu -->            <!-- / Left Menu -->
 
 <!-- Layout container -->
 <div class="layout-page">
     <!-- Navbar -->
-    <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
 <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
 <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
 <i class="bx bx-menu bx-sm"></i>
@@ -63,18 +54,13 @@
 </div>
 
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
-
 <div class="navbar-nav align-items-center">
 <div class="nav-item navbar-search-wrapper mb-0">
         <img src="/webDNP/assets/img/logo/logo-dnp.png" width="45" height="45">
         <span class="d-none d-md-inline-block"><h6>ระบบฐานข้อมูลเพื่อการตัดสินใจในการบริหารจัดการอุทยานแห่งชาติ</h6></span>
 </div>
 </div> 
-
-<ul class="navbar-nav flex-row align-items-center ms-auto">
-
-</ul>
+<ul class="navbar-nav flex-row align-items-center ms-auto"></ul>
 </div>
 
 <!-- Search Small Screens -->
@@ -82,8 +68,7 @@
 <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
 <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
 </div>
-
-</nav>                <!-- / Navbar -->
+</nav> 
 
     <!-- Content wrapper -->
     <div class="content-wrapper">
@@ -138,7 +123,7 @@
           </table>
           
 
-    <script>
+   <!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('/webDNP/pages/10/01/1001.php')
                 .then(response => {
@@ -169,11 +154,10 @@
                 })
                 .catch(error => console.error('Error:', error));
         });
-    </script>
+    </script> -->
 
     <input type="hidden" name="hid_delete_pic" id="hid_delete_pic">
 </form>
-
 </div>
 </div>
 
@@ -181,7 +165,6 @@
 <span class="close">&times;</span>
 <img class="modal-content" id="img01">
 </div>
-
 
 <div id="card_risk_pic_add" class="card p-0 me-1 border-0" style="width: 100px;" hidden>
 <img class="rounded img_risk" />
@@ -191,7 +174,6 @@
 </div>
 </div>                    </div>
         <!-- / Content -->
-
         <!-- Footer -->
         <footer class="content-footer footer bg-footer-theme">
 <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -208,10 +190,8 @@
 </div>
 <!-- / Layout page -->
 </div>
-
 <!-- Overlay -->
 <div class="layout-overlay layout-menu-toggle"></div>
-
 
 <!-- Drag Target Area To SlideIn Menu On Small Screens -->
 <div class="drag-target"></div>
@@ -219,9 +199,6 @@
 </div>
 <!-- / Layout wrapper -->
 
-<form method="post" id="form_delete">
-<input type="hidden" name="hid_id_delete" id="hid_id_delete">
-</form>
 
 <!-- Modal -->
 <div class="modal fade" id="modalDelete" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
@@ -273,25 +250,16 @@
 </div>
 </div>
 
-
-<!-- Core JS -->
-    <!-- build:js -->
     <script src="/webDNP/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="/webDNP/assets/vendor/libs/popper/popper.js"></script>
     <script src="/webDNP/assets/vendor/js/bootstrap.js"></script>
     <script src="/webDNP/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
     <script src="/webDNP/assets/vendor/libs/typeahead-js/typeahead.js"></script>
-
     <script src="/webDNP/assets/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
     <script src="/webDNP/assets/vendor/libs/select2/select2.js"></script> 
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
-
     <script src="/webDNP/assets/vendor/libs/moment/moment.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables/jquery.dataTables.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
@@ -301,61 +269,115 @@
     <script src="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
     <script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>
     <script src="/webDNP/assets/js/datepicker_config.js"></script>
-    <!-- Main JS -->
     <script src="/webDNP/assets/js/main.js"></script>
-    <!-- Page JS -->
     <script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>
-    <script src="/webDNP/pages/10/01/search.js"></script>
-
-
+    <!--<script src="/webDNP/pages/10/01/search.js"></script>-->
 
 <!--ช่องค้นหาใน รายชื่อต่างๆ-->
-
-
 <script>
-function url_search(){
-    var search = document.querySelector('.search').value;
-    var date_search = document.querySelector('.date_search').value;
-    var url = "/webDNP/pages/10/01/1001.php";
+    // สร้าง URL ตามค่าการค้นหา
+    function url_search() {
+        var search = document.querySelector('.search').value;
+        var date_search = document.querySelector('.date_search').value;
+        var url = "/webDNP/pages/10/01/1001.php";
 
-    if(search != "" && search != undefined) url += "?search=" + encodeURIComponent(search);
-    if(date_search != "" && date_search != undefined) url += (search ? "&" : "?") + "date=" + encodeURIComponent(date_search);
-
-    return url;
-}
-
-$(function() {
-    $('input[type=search]').keydown(function (event) {
-        if (event.which == 13) {
-            window.location = url_search();
-            event.preventDefault();
+        if (search) {
+            url += "?search=" + encodeURIComponent(search);
         }
+
+        if (date_search) {
+            url += (search ? "&" : "?") + "date=" + encodeURIComponent(date_search);
+        }
+
+        return url;
+    }
+
+    // ฟังก์ชันแสดงข้อมูลในตาราง
+    function renderTable(data) {
+        const tableBody = document.querySelector('#data-table tbody');
+        tableBody.innerHTML = '';  // ล้างข้อมูลเก่าออกจากตาราง
+
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${row.id}</td>
+                <td>${row.head}</td>
+                <td>${row.type_np}</td>
+                <td>${row.park}</td>
+                <td>${row.type_com}</td>
+                <td>${row.year_np}</td>
+                <td>${row.np_id}</td>
+                <td>${row.brand_id}</td>
+                <td>${row.cpu_id}</td>
+                <td>${row.purpose}</td>
+                <td>${row.status_np}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    }
+
+    // เมื่อหน้าเว็บโหลดเสร็จ
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch(url_search())  // เรียกฟังก์ชันเพื่อดึงข้อมูลทั้งหมดในตอนแรก
+            .then(response => response.json())
+            .then(data => {
+                renderTable(data);  // เรียกฟังก์ชันเพื่อแสดงข้อมูลในตาราง
+            })
+            .catch(error => console.error('Error:', error));
     });
 
-    var e = $(".select2");
-    e.length && e.each(function() {
-        var e = $(this);
-        e.wrap('<div class="position-relative"></div>'), e.select2({
-            dropdownParent: e.parent()
-        })
+    // เมื่อผู้ใช้คลิกปุ่มค้นหา
+    document.querySelector('#btn_search').addEventListener('click', function(event) {
+        event.preventDefault(); // ป้องกันการรีเฟรชหน้า
+        fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
+            .then(response => response.json())
+            .then(data => {
+                renderTable(data);  // อัพเดตข้อมูลในตาราง
+            })
+            .catch(error => console.error('Error:', error));
     });
-});
 
-function modal_delete(id) {
-    $("#modalDelete").modal('show');
-    $("#modalDelete #btn_ok").click(function () {
-        $("#form_delete #hid_id_delete").val(id);
-        $("#modalDelete").modal('hide');
-        $("#form_delete").submit();
+    // เมื่อผู้ใช้กดปุ่ม Enter ในช่องค้นหา
+    document.querySelectorAll('input[type=search]').forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();  // ป้องกันการส่งฟอร์ม
+                fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
+                    .then(response => response.json())
+                    .then(data => {
+                        renderTable(data);  // อัพเดตข้อมูลในตาราง
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        });
     });
-}
 
-function modal_alert(title,text){
-    $("#modalAlert #modalTitle").html(title);
-    $("#modalAlert #modalText").html(text);
-    $("#modalAlert").modal('show');
-}
+    $(function() {
+        $('.select2').each(function() {
+            var e = $(this);
+            e.wrap('<div class="position-relative"></div>'), e.select2({
+                dropdownParent: e.parent()
+            });
+        });
+    });
+
+    function modal_delete(id) {
+        $("#modalDelete").modal('show');
+        $("#modalDelete #btn_ok").click(function () {
+            $("#form_delete #hid_id_delete").val(id);
+            $("#modalDelete").modal('hide');
+            $("#form_delete").submit();
+        });
+    }
+
+    function modal_alert(title, text) {
+        $("#modalAlert #modalTitle").html(title);
+        $("#modalAlert #modalText").html(text);
+        $("#modalAlert").modal('show');
+    }
 </script>
+
+
 
 
 </body>
