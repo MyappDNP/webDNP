@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <!-- beautify ignore:start -->
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-footer-fixed" dir="ltr" data-theme="theme-bordered" data-assets-path="/webDNP/assets/" data-template="vertical-menu-template">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>ระบบฐานข้อมูลเพื่อการตัดสินใจในการบริหารจัดการอุทยานแห่งชาติ</title>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
     <!-- Icons -->
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/boxicons.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/flag-icons.css" />
-
     <link rel="stylesheet" href="/webDNP/assets/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" type="text/css" href="/webDNP/assets/css/theme-bordered.css" class="template-customizer-theme-css">
     <link rel="stylesheet" href="/webDNP/assets/css/demo.css" />
@@ -26,15 +23,12 @@
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="/webDNP/assets/css/my_style.css" />
-    <!-- Page CSS -->
-    
+
     <!-- Helpers -->
     <script src="/webDNP/assets/js/helpers.js"></script>
     <script src="/webDNP/assets/js/template-customizer.js"></script>
     <script src="/webDNP/assets/js/config.js"></script>
 
-   
-    
 </head>
 <body>
     <!-- Layout wrapper -->
