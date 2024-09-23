@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-    <link rel="stylesheet" href="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">
+    <!--<link rel="stylesheet" href="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">-->
     <link rel="stylesheet" href="/webDNP/assets/css/my_style.css" />
     <!-- Page CSS -->
     
@@ -37,7 +37,6 @@
     <script src="/webDNP/assets/js/template-customizer.js"></script>
     <script src="/webDNP/assets/js/config.js"></script>
 
-   
     
 </head>
 <body>
@@ -100,26 +99,63 @@
 <div class="card-body">
         <form method="POST" id="form_risk_report" enctype="multipart/form-data">
     <div class="row">
+
+    <div class="mb-3 col-md-6">
+            <label class="fw-bold">สำนักบริหารพื้นที่อนุรักษ์<small class="text-danger ms-1">*</small></label>
+            <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+                <option value="">-- เลือกหน่วยงาน --</option>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_head.php'; ?>
+            </select>
+        </div>
+
+        <div></div>
+
+<div class="mb-3 col-md-6">
+    <label class="fw-bold">ประเภทหน่วยงาน<small class="text-danger ms-1">*</small></label>
+    <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+        <option value="">-- เลือกประเภท --</option>
+        <option value="national_park">อุทยานแห่งชาติ</option>
+        <option value="forest_park">วนอุทยาน</option>
+        <!-- เพิ่มตัวเลือกอื่น ๆ ได้ที่นี่ -->
+    </select>
+</div>
+
         <div class="mb-3 col-md-6">
             <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
             <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
                 <option value="">-- เลือกหน่วยงาน --</option>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_park.php'; ?>
-
             </select>
         </div>
+
         <div></div>
 
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">วันที่เกิดอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
-            <div class="input-group input-group-merge">
-                <input class="form-control date" autocomplete="off" onkeypress="return false;" onkeyup="return false;" onkeydown="return false;" type="text" id="txt_riskreportdate" name="txt_riskreportdate" placeholder="วันที่เกิดอุบัติเหตุ/ภัยพิบัติ" value="">
-                <span class="input-group-text cursor-pointer" onclick="document.getElementById('txt_riskreportdate').focus();"><i class="bx bx-calendar"></i></span>
-            </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">สถานที่เกิดอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
-            <input class="form-control" type="text" id="txt_riskreportplace" name="txt_riskreportplace" placeholder="สถานที่เกิดอุบัติเหตุ/ภัยพิบัติ" value="" />
+<div class="mb-3 col-md-6">
+    <label class="fw-bold">ปี พ.ศ. ที่ได้รับ<small class="text-danger ms-1">*</small></label>
+    <input class="form-control" type="text" id="txt_riskreportyear" name="txt_riskreportyear" placeholder="ปี พ.ศ." maxlength="4" oninput="checkYear(this)">
+    <div id="yearError" class="text-danger" style="display: none;">กรุณากรอกปี พ.ศ. ในรูปแบบ 25XX</div>
+</div>
+
+<script>
+function checkYear(input) {
+    const value = input.value;
+    // เช็คว่าเป็นปีที่เริ่มต้นด้วย 25 และตามด้วยเลข 2 หลัก
+    if (/^25\d{0,2}$/.test(value) || value === "") {
+        input.style.borderColor = ""; // Reset border color
+        document.getElementById("yearError").style.display = "none"; // Hide error message
+    } else {
+        input.style.borderColor = "red"; // Highlight invalid input
+        document.getElementById("yearError").style.display = "block"; // Show error message
+    }}
+</script>
+
+
+<div class="mb-3 col-md-6">
+            <label class="fw-bold">ประเภทครุภัณฑ์คอมพิวเตอร์<small class="text-danger ms-1">*</small></label>
+            <select id="type_com" name="type_com" class="select2 form-select">
+                <option value="">-- เลือกหน่วยงาน --</option>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_com.php'; ?>
+            </select>
         </div>
 
         <div class="mb-3 col-md-6">
@@ -355,8 +391,8 @@
     <script src="/webDNP/assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
 
-    <script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>
-    <script src="/webDNP/assets/js/datepicker_config.js"></script>
+    <!--<script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>-->
+    <!--<script src="/webDNP/assets/js/datepicker_config.js"></script>-->
     <!-- Main JS -->
     <script src="/webDNP/assets/js/main.js"></script>
 
@@ -409,6 +445,11 @@
         $("#modalAlert #modalText").html(text);
         $("#modalAlert").modal('show');
     }
+</script>
+
+<script>
+
+
 </script>
 
 </body>

@@ -88,10 +88,10 @@
           <div class="col-12 col-md-8 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2">
             <div class="dataTables_filter">
             <input type="search" class="form-control search" placeholder="ค้นหา..." value="" id="search_input">
-            <input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">
-            <button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>
+            <!--<input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">-->
+            <!--<button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>-->
 
-              <a href="index.php" class="btn btn-outline-primary">ยกเลิก</a>
+              <!--<a href="index.php" class="btn btn-outline-primary">ยกเลิก</a>-->
             </div>
           </div>
           
@@ -269,82 +269,62 @@
 
 <!--ช่องค้นหาใน รายชื่อต่างๆ-->
 <script>
-    // สร้าง URL ตามค่าการค้นหา
-    function url_search() {
-        var search = document.querySelector('.search').value;
-        var date_search = document.querySelector('.date_search').value;
-        var url = "/webDNP/pages/10/01/1001.php";
+// ฟังก์ชันเพื่อสร้าง URL สำหรับการค้นหา
+function url_search() {
+    var search = document.querySelector('.search').value;
+    var url = "/webDNP/pages/10/01/1001.php";
 
-        if (search) {
-            url += "?search=" + encodeURIComponent(search);
-        }
-
-        if (date_search) {
-            url += (search ? "&" : "?") + "date=" + encodeURIComponent(date_search);
-        }
-
-        return url;
+    if (search) {
+        url += "?search=" + encodeURIComponent(search);
     }
 
-    // ฟังก์ชันแสดงข้อมูลในตาราง
-    function renderTable(data) {
-        const tableBody = document.querySelector('#data-table tbody');
-        tableBody.innerHTML = '';  // ล้างข้อมูลเก่าออกจากตาราง
+    return url;
+}
 
-        data.forEach(row => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${row.id}</td>
-                <td>${row.head}</td>
-                <td>${row.type_np}</td>
-                <td>${row.park}</td>
-                <td>${row.type_com}</td>
-                <td>${row.year_np}</td>
-                <td>${row.np_id}</td>
-                <td>${row.brand_id}</td>
-                <td>${row.cpu_id}</td>
-                <td>${row.purpose}</td>
-                <td>${row.status_np}</td>
-            `;
-            tableBody.appendChild(tr);
-        });
-    }
+// ฟังก์ชันเพื่อแสดงข้อมูลในตาราง
+function renderTable(data) {
+    const tableBody = document.querySelector('#data-table tbody');
+    tableBody.innerHTML = '';  // ล้างข้อมูลเก่าออกจากตาราง
 
-    // เมื่อหน้าเว็บโหลดเสร็จ
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch(url_search())  // เรียกฟังก์ชันเพื่อดึงข้อมูลทั้งหมดในตอนแรก
-            .then(response => response.json())
-            .then(data => {
-                renderTable(data);  // เรียกฟังก์ชันเพื่อแสดงข้อมูลในตาราง
-            })
-            .catch(error => console.error('Error:', error));
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${row.id}</td>
+            <td>${row.head}</td>
+            <td>${row.type_np}</td>
+            <td>${row.park}</td>
+            <td>${row.type_com}</td>
+            <td>${row.year_np}</td>
+            <td>${row.np_id}</td>
+            <td>${row.brand_id}</td>
+            <td>${row.cpu_id}</td>
+            <td>${row.purpose}</td>
+            <td>${row.status_np}</td>
+        `;
+        tableBody.appendChild(tr);
     });
+}
 
-    // เมื่อผู้ใช้คลิกปุ่มค้นหา
-    document.querySelector('#btn_search').addEventListener('click', function(event) {
-        event.preventDefault(); // ป้องกันการรีเฟรชหน้า
-        fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
-            .then(response => response.json())
-            .then(data => {
-                renderTable(data);  // อัพเดตข้อมูลในตาราง
-            })
-            .catch(error => console.error('Error:', error));
-    });
+// เมื่อหน้าเว็บโหลดเสร็จ
+document.addEventListener('DOMContentLoaded', function() {
+    fetch(url_search())  // เรียกฟังก์ชันเพื่อดึงข้อมูลทั้งหมดในตอนแรก
+        .then(response => response.json())
+        .then(data => {
+            renderTable(data);  // เรียกฟังก์ชันเพื่อแสดงข้อมูลในตาราง
+        })
+        .catch(error => console.error('Error:', error));
+});
 
-    // เมื่อผู้ใช้กดปุ่ม Enter ในช่องค้นหา
-    document.querySelectorAll('input[type=search]').forEach(input => {
-        input.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();  // ป้องกันการส่งฟอร์ม
-                fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
-                    .then(response => response.json())
-                    .then(data => {
-                        renderTable(data);  // อัพเดตข้อมูลในตาราง
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
-        });
-    });
+// เมื่อผู้ใช้พิมพ์ในช่องค้นหา จะทำการค้นหาทันที
+document.querySelector('.search').addEventListener('input', function(event) {
+    fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
+        .then(response => response.json())
+        .then(data => {
+            renderTable(data);  // อัพเดตข้อมูลในตาราง
+        })
+        .catch(error => console.error('Error:', error));
+});
+
 
     $(function() {
         $('.select2').each(function() {
