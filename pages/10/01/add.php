@@ -202,6 +202,18 @@ function checkYear(input) {
             <input type="submit" class="btn btn-primary me-sm-2 me-1" name="btn_save" value="บันทึก">
             <a class="btn btn-label-secondary" href="index.php">ย้อนกลับ</a>
         </div>
+
+<!--<div class="container mt-5">
+    <h2 class="mb-3">นำเข้าข้อมูลจากไฟล์ Excel</h2>
+    <form action="import_excel.php" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="file" class="form-label">เลือกไฟล์ Excel :</label>
+            <input type="file" class="form-control" name="excel_file" id="file" accept=".xls, .xlsx" required>
+        </div>
+        <button type="submit" class="btn btn-primary">นำเข้าข้อมูล</button>
+    </form>
+</div>-->
+        
         <div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0"></div>
     </div>
 

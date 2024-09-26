@@ -1,0 +1,17 @@
+{
+    "name": "abcd1234/web-dnp",
+    "autoload": {
+        "psr-4": {
+            "Abcd1234\\WebDnp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MyappDNP",
+            "email": "myapp.dnp@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.2"
+    }
+}
