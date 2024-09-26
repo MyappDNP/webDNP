@@ -21,7 +21,7 @@ $result = $conn->query($sql);  // รันคำสั่ง SQL และด�
 if ($result->num_rows > 0) {
     // วนลูปเพื่อแสดงรายการอุทยานแห่งชาติใน select option
     while ($row = $result->fetch_assoc()) {
-        echo '<option value="' . $row['id'] . '">' . htmlspecialchars($row['head']) . '</option>';
+        echo '<option value="' . $row['head'] . '">' . htmlspecialchars($row['head']) . '</option>';
     }
 } else {
     echo '<option value="">ไม่มีข้อมูล</option>';

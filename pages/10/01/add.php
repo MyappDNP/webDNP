@@ -3,7 +3,6 @@
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-footer-fixed" dir="ltr" data-theme="theme-bordered" data-assets-path="/webDNP/assets/" data-template="vertical-menu-template">
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -40,7 +39,6 @@
     
 </head>
 <body>
-
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
@@ -102,7 +100,7 @@
 
     <div class="mb-3 col-md-6">
             <label class="fw-bold">สำนักบริหารพื้นที่อนุรักษ์<small class="text-danger ms-1">*</small></label>
-            <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+            <select id="head" name="head" class="select2 form-select">
                 <option value="">-- เลือกหน่วยงาน --</option>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_head.php'; ?>
             </select>
@@ -112,7 +110,7 @@
 
 <div class="mb-3 col-md-6">
     <label class="fw-bold">ประเภทหน่วยงาน<small class="text-danger ms-1">*</small></label>
-    <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+    <select id="type_np" name="type_np" class="select2 form-select">
         <option value="">-- เลือกประเภท --</option>
         <option value="national_park">อุทยานแห่งชาติ</option>
         <option value="forest_park">วนอุทยาน</option>
@@ -122,7 +120,7 @@
 
         <div class="mb-3 col-md-6">
             <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
-            <select id="ddl_pta_code" name="ddl_pta_code" class="select2 form-select">
+            <select id="park" name="park" class="select2 form-select">
                 <option value="">-- เลือกหน่วยงาน --</option>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_park.php'; ?>
             </select>
@@ -132,7 +130,7 @@
 
 <div class="mb-3 col-md-6">
     <label class="fw-bold">ปี พ.ศ. ที่ได้รับ<small class="text-danger ms-1">*</small></label>
-    <input class="form-control" type="text" id="txt_riskreportyear" name="txt_riskreportyear" placeholder="ปี พ.ศ." maxlength="4" oninput="checkYear(this)">
+    <input class="form-control" type="text" id="year" name="year" placeholder="ปี พ.ศ." maxlength="4" oninput="checkYear(this)">
     <div id="yearError" class="text-danger" style="display: none;">กรุณากรอกปี พ.ศ. ในรูปแบบ 25XX</div>
 </div>
 
@@ -159,23 +157,24 @@ function checkYear(input) {
         </div>
 
         <div class="mb-3 col-md-6">
-            <label class="fw-bold">พิกัด Latitude</label>
-            <input class="form-control" type="text" id="txt_x" name="txt_x" placeholder="พิกัด ละติจูด เหนือ" value="0" />
+            <label class="fw-bold">ยี่ห้อและรุ่นของเครื่อง</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ระบุยี่ห้อและรุ่นของเครื่อง" />
         </div>
         <div class="mb-3 col-md-6">
-            <label class="fw-bold">พิกัด Longitude</label>
-            <input class="form-control" type="text" id="txt_y" name="txt_y" placeholder="พิกัด ลองจิจูด ตะวันออก" value="0" />
+            <label class="fw-bold">รุ่น CPU</label>
+            <input class="form-control" type="text" id="brand_id" name="brand_id" placeholder="ระบุรุ่น CPU" />
         </div>
 
         <div class="mb-3 col-md-6">
-            <label class="fw-bold">ประเภทของอุบัติเหตุ/ภัยพิบัติ<small class="text-danger ms-1">*</small></label>
-            <select id="ddl_accidenttypeid" name="ddl_accidenttypeid" class="select2 form-select">
-                <option value="">-- เลือกประเภทของอุบัติเหตุ/ภัยพิบัติ --</option>
-                <option value="01" >พาหนะทางบก</option><option value="02" >พาหนะทางน้ำ</option><option value="03" >สัตว์</option><option value="04" >ตกจากที่สูง</option><option value="05" >จมน้ำ</option><option value="06" >อื่นๆ</option>                        </select>
+            <label class="fw-bold">วัตถุประสงค์การใช้งาน<small class="text-danger ms-1">*</small></label>
+            <select id="purpose" name="purpose" class="select2 form-select">
+                <option value="">-- เลือกวัตถุประสงค์การใช้งาน --</option>
+                <option value="01" >งานสำนักงาน</option><option value="02" >งานประมวลผลข้อมูล</option><option value="03" >อื่นๆ</option> </select>
         </div>
-        <div class="mb-3 col-md-6">
+
+        <!--<div class="mb-3 col-md-6">
             <label class="fw-bold">ความเกี่ยวพันกับเครื่องดื่มแอลกอฮอล์<small class="text-danger ms-1">*</small></label>
-            <!-- <div class="col">ไม่เกี่ยวพัน</div> -->
+           
             <div class="col-md">
                 <div class="form-check form-check-inline mt-3">
                     <input class="form-check-input" type="radio" name="rdo_riskreportalgohol" id="rdo_riskreportalgohol1" value="y"  />
@@ -186,80 +185,24 @@ function checkYear(input) {
                     <label class="form-check-label" for="rdo_riskreportalgohol2">ไม่เกี่ยวพัน</label>
                 </div>
             </div>
-        </div>
-
+        </div>-->
         <div class="mb-3 col-md-6">
-            <label class="fw-bold">จำนวนผู้บาดเจ็บเล็กน้อย</label>
-            <div class="input-group input-group-merge">
-                <input type="text" class="form-control" id="txt_riskreportinjureminor" name="txt_riskreportinjureminor" placeholder="จำนวนผู้บาดเจ็บเล็กน้อย" value="0" />
-                <span class="input-group-text">คน</span>
-            </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">จำนวนผู้บาดเจ็บสาหัส</label>
-            <div class="input-group input-group-merge">
-                <input type="text" class="form-control" id="txt_riskreportinjurebad" name="txt_riskreportinjurebad" placeholder="จำนวนผู้บาดเจ็บสาหัส" value="0" />
-                <span class="input-group-text">คน</span>
-            </div>
+            <label class="fw-bold">สถานะครุภัณฑ์<small class="text-danger ms-1">*</small></label>
+            <select id="status" name="status" class="select2 form-select">
+                <option value="">-- เลือกสถานะครุภัณฑ์ --</option>
+                <option value="01" >ปกติ</option><option value="02" >ชำรุด</option> </select>
         </div>
 
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">จำนวนผู้เสียชีวิต</label>
-            <div class="input-group input-group-merge">
-                <input type="text" class="form-control" id="txt_riskreportdeath" name="txt_riskreportdeath" placeholder="จำนวนผู้เสียชีวิต" value="0" />
-                <span class="input-group-text">คน</span>
-            </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">มูลค่าทรัพย์สินเสียหาย</label>
-            <div class="input-group input-group-merge">
-                <input type="text" class="form-control" id="txt_riskreportcost" name="txt_riskreportcost" placeholder="มูลค่าทรัพย์สินเสียหาย" value="0" />
-                <span class="input-group-text">บาท</span>
-            </div>
-        </div>
-
-        <div class="mb-3 col-md-12">
-            <label class="fw-bold">รายละเอียด<small class="text-danger ms-1">*</small></label>
-            <textarea class="form-control" rows="10" id="txt_riskreportdesc" name="txt_riskreportdesc" placeholder="รายละเอียด"></textarea>
-        </div>
-
-        <div class="mb-3 col-md-12">
-            <label class="fw-bold">ความเสียหาย</label>
-            <textarea class="form-control" rows="10" id="txt_riskreportdamage" name="txt_riskreportdamage" placeholder="ความเสียหาย"></textarea>
-        </div>
-
-        <div class="mb-3 col-md-12">
-            <label class="fw-bold">การดำเนินการของเจ้าหน้าที่</label>
-            <textarea class="form-control" rows="10" id="txt_riskreportmanage" name="txt_riskreportmanage" placeholder="การดำเนินการของเจ้าหน้าที่"></textarea>
-        </div>
-
-        <div class="mb-3 col-md-12">
-            <label class="fw-bold">ภาพการเกิดอุบัติเหตุ/ภัยพิบัติ</label>
-            <div class="col mb-2">
-                <button type="button" class="btn btn-primary" id="btn_risk_pic_add">
-                    <span class="tf-icons bx bx-image-add"></span>&nbsp; เพิ่มรูปภาพ
-                </button>
-                <div id="row_error_risk_pic_add" class="fv-plugins-message-container border border-danger p-1 invalid-feedback clearfix" hidden="true">
-                    <span id="lbl_error_risk_pic_add"></span> <button type="button" class="btn btn-xs btn btn-danger float-end" onclick="$('#row_error_risk_pic_add').attr('hidden','hidden');">ปิด</button>
-                </div>
-            </div>
-
-
-            <div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0">
-                                        </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">ผู้แจ้งและเบอร์ติดต่อ<small class="text-danger ms-1">*</small></label>
-            <input class="form-control" type="text" id="txt_riskreportperson" name="txt_riskreportperson" placeholder="ผู้รายงานและเบอร์ติดต่อ" value="" />
-        </div>
-
+        <!--<div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0"></div>--> 
+    </div>
     </div>
 
     <div class="row text-center">
         <div class="col-md">
             <input type="submit" class="btn btn-primary me-sm-2 me-1" name="btn_save" value="บันทึก">
-            <a class="btn btn-label-secondary" href="?mode=list">ย้อนกลับ</a>
+            <a class="btn btn-label-secondary" href="index.php">ย้อนกลับ</a>
         </div>
+        <div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0"></div>
     </div>
 
     <input type="hidden" name="hid_delete_pic" id="hid_delete_pic">
@@ -397,7 +340,7 @@ function checkYear(input) {
     <script src="/webDNP/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>
+    <!--<script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>-->
 
 
 
