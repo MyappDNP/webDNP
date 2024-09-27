@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <!-- beautify ignore:start -->
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-footer-fixed" dir="ltr" data-theme="theme-bordered" data-assets-path="/webDNP/assets/" data-template="vertical-menu-template">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>ระบบฐานข้อมูลเพื่อการตัดสินใจในการบริหารจัดการอุทยานแห่งชาติ</title>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
     <!-- Icons -->
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/boxicons.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/fonts/flag-icons.css" />
-
-    <!-- Core CSS -->
     <link rel="stylesheet" href="/webDNP/assets/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" type="text/css" href="/webDNP/assets/css/theme-bordered.css" class="template-customizer-theme-css">
     <link rel="stylesheet" href="/webDNP/assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/select2/select2.css" />
@@ -27,34 +21,26 @@
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
     <link rel="stylesheet" href="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-    <!--<link rel="stylesheet" href="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">-->
+    <link rel="stylesheet" href="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="/webDNP/assets/css/my_style.css" />
-    <!-- Page CSS -->
-    
+
     <!-- Helpers -->
     <script src="/webDNP/assets/js/helpers.js"></script>
     <script src="/webDNP/assets/js/template-customizer.js"></script>
     <script src="/webDNP/assets/js/config.js"></script>
-
-    <script src="/webDNP/pages/10/01/park.js"></script>
-
 
 </head>
 <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
-            <!-- Left Menu -->
-            <!-- Menu -->
         <div id="leftMenu"></div>
         <script src="/webDNP/assets/js/leftMenu.js"></script>
-            
-<!-- / Menu -->            <!-- / Left Menu -->
 
 <!-- Layout container -->
 <div class="layout-page">
     <!-- Navbar -->
-    <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
 <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
 <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
 <i class="bx bx-menu bx-sm"></i>
@@ -62,18 +48,13 @@
 </div>
 
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
-
 <div class="navbar-nav align-items-center">
 <div class="nav-item navbar-search-wrapper mb-0">
         <img src="/webDNP/assets/img/logo/logo-dnp.png" width="45" height="45">
         <span class="d-none d-md-inline-block"><h6>ระบบฐานข้อมูลเพื่อการตัดสินใจในการบริหารจัดการอุทยานแห่งชาติ</h6></span>
 </div>
 </div> 
-
-<ul class="navbar-nav flex-row align-items-center ms-auto">
-
-</ul>
+<ul class="navbar-nav flex-row align-items-center ms-auto"></ul>
 </div>
 
 <!-- Search Small Screens -->
@@ -81,146 +62,96 @@
 <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
 <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
 </div>
-
-</nav>                <!-- / Navbar -->
+</nav> 
 
     <!-- Content wrapper -->
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
             <h6 class="fw-bold">
-<span class="text-muted fw-light">ข้อมูลครุภัณฑ์คอมพิวเตอร์ /</span> เพิ่มข้อมูล</h6>
+<span class="text-muted fw-light">ข้อมูลครุภัณฑ์คอมพิวเตอร์ /</span> ข้อมูลทั้งหมด</h6>
 
 <div class="card">
-<div class="card-header d-flex align-items-center justify-content-between">
-<h5 class="mb-0">เพิ่มข้อมูลครุภัณฑ์คอมพิวเตอร์</h5>
-</div>
-<!-- <hr class="my-0 mx-0" /> -->
-<div class="card-body">
-        <form method="POST" id="form_risk_report" enctype="multipart/form-data">
-    <div class="row">
-
-    <div class="mb-3 col-md-6">
-    <label class="fw-bold">สำนักบริหารพื้นที่อนุรักษ์<small class="text-danger ms-1">*</small></label>
-    <select id="head" name="head" class="select2 form-select">
-        <option value="">-- เลือกหน่วยงาน --</option>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_head.php'; ?>
-    </select>
-</div>
-
-<div class="mb-3 col-md-6">
-    <label class="fw-bold">ประเภทหน่วยงาน<small class="text-danger ms-1">*</small></label>
-    <select id="type_np" name="type_np" class="select2 form-select">
-        <option value="">-- เลือกประเภท --</option>
-        <option value="national_park">อุทยานแห่งชาติ</option>
-        <option value="forest_park">วนอุทยาน</option>
-        <!-- เพิ่มตัวเลือกอื่น ๆ ได้ที่นี่ -->
-    </select>
-</div>
-
-<div class="mb-3 col-md-6">
-    <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
-    <select id="park" name="park" class="select2 form-select">
-        <option value="">-- เลือกหน่วยงาน --</option>
-        <!-- ตัวเลือกหน่วยงานจะถูกเพิ่มที่นี่ -->
-    </select>
-</div>
-
-
-        <div></div>
-
-<div class="mb-3 col-md-6">
-    <label class="fw-bold">ปี พ.ศ. ที่ได้รับ<small class="text-danger ms-1">*</small></label>
-    <input class="form-control" type="text" id="year" name="year" placeholder="ปี พ.ศ." maxlength="4" oninput="checkYear(this)">
-    <div id="yearError" class="text-danger" style="display: none;">กรุณากรอกปี พ.ศ. ในรูปแบบ 25XX</div>
-</div>
-
-<script>
-function checkYear(input) {
-    const value = input.value;
-    // เช็คว่าเป็นปีที่เริ่มต้นด้วย 25 และตามด้วยเลข 2 หลัก
-    if (/^25\d{0,2}$/.test(value) || value === "") {
-        input.style.borderColor = ""; // Reset border color
-        document.getElementById("yearError").style.display = "none"; // Hide error message
-    } else {
-        input.style.borderColor = "red"; // Highlight invalid input
-        document.getElementById("yearError").style.display = "block"; // Show error message
-    }}
-</script>
-
-
-<div class="mb-3 col-md-6">
-            <label class="fw-bold">ประเภทครุภัณฑ์คอมพิวเตอร์<small class="text-danger ms-1">*</small></label>
-            <select id="type_com" name="type_com" class="select2 form-select">
-                <option value="">-- เลือกหน่วยงาน --</option>
-                <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_com.php'; ?>
-            </select>
-        </div>
-
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">ยี่ห้อและรุ่นของเครื่อง</label>
-            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ระบุยี่ห้อและรุ่นของเครื่อง" />
-        </div>
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">รุ่น CPU</label>
-            <input class="form-control" type="text" id="brand_id" name="brand_id" placeholder="ระบุรุ่น CPU" />
-        </div>
-
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">วัตถุประสงค์การใช้งาน<small class="text-danger ms-1">*</small></label>
-            <select id="purpose" name="purpose" class="select2 form-select">
-                <option value="">-- เลือกวัตถุประสงค์การใช้งาน --</option>
-                <option value="01" >งานสำนักงาน</option><option value="02" >งานประมวลผลข้อมูล</option><option value="03" >อื่นๆ</option> </select>
-        </div>
-
-        <!--<div class="mb-3 col-md-6">
-            <label class="fw-bold">ความเกี่ยวพันกับเครื่องดื่มแอลกอฮอล์<small class="text-danger ms-1">*</small></label>
-           
-            <div class="col-md">
-                <div class="form-check form-check-inline mt-3">
-                    <input class="form-check-input" type="radio" name="rdo_riskreportalgohol" id="rdo_riskreportalgohol1" value="y"  />
-                    <label class="form-check-label" for="rdo_riskreportalgohol1">เกี่ยวพัน</label>
-                </div>
-                <div class="form-check form-check-inline mt-3">
-                    <input class="form-check-input" type="radio" name="rdo_riskreportalgohol" id="rdo_riskreportalgohol2" value="n"  />
-                    <label class="form-check-label" for="rdo_riskreportalgohol2">ไม่เกี่ยวพัน</label>
-                </div>
+    <div class="card-datatable table-responsive">
+      <div class="dataTables_wrapper dt-bootstrap5 no-footer">
+        <div class="row ms-2 me-3">
+          <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+            <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
+              <div class="dt-buttons">
+                <a class="dt-button btn btn-primary" href="add.php">
+                  <i class="bx bx-plus me-md-2"></i>
+                  <span class="d-md-inline-block d-none">เพิ่มข้อมูล</span>
+                </a>
+              </div>
             </div>
-        </div>-->
-        <div class="mb-3 col-md-6">
-            <label class="fw-bold">สถานะครุภัณฑ์<small class="text-danger ms-1">*</small></label>
-            <select id="status" name="status" class="select2 form-select">
-                <option value="">-- เลือกสถานะครุภัณฑ์ --</option>
-                <option value="01" >ปกติ</option><option value="02" >ชำรุด</option> </select>
-        </div>
+          </div>
+          <div class="col-12 col-md-8 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2">
+            <div class="dataTables_filter">
+            <input type="search" class="form-control search" placeholder="ค้นหา..." value="" id="search_input">
+            <!--<input type="search" class="form-control date_search" placeholder="วันที่" autocomplete="off" value="" id="txt_riskreportdate" onkeyup="return false;" onkeydown="return false;">-->
+            <!--<button type="button" class="btn btn-outline-primary" id="btn_search">ค้นหา</button>-->
 
-        <!--<div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0"></div>--> 
-    </div>
-    </div>
+              <!--<a href="index.php" class="btn btn-outline-primary">ยกเลิก</a>-->
+            </div>
+          </div>
+          
+          <table id="data-table" class="table border-top dataTable no-footer dtr-column table-sm table-hover">
+            <thead>
+              <tr>
+                <th class="cell-fit">ลำดับ</th>
+                <th>สำนักบริหารพื้นที่อนุรักษ์</th>
+                <th>ประเภท</th>
+                <th>อุทยานแห่งชาติ/วนอุทยาน</th>
+                <th>ประเภทครุภัณฑ์คอมพิวเตอร์</th>
+                <th>ปี พ.ศ.</th>
+                <th>หมายเลขครุภัณฑ์</th>
+                <th>ยี่ห้อ</th>
+                <th>CPU</th>
+                <th>ลักษณะการใช้งาน</th>
+                <th>สถานะ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be loaded here -->
+            </tbody>
+          </table>
+          
 
-    <div class="row text-center">
-        <div class="col-md">
-            <input type="submit" class="btn btn-primary me-sm-2 me-1" name="btn_save" value="บันทึก">
-            <a class="btn btn-label-secondary" href="index.php">ย้อนกลับ</a>
-        </div>
-
-<!--<div class="container mt-5">
-    <h2 class="mb-3">นำเข้าข้อมูลจากไฟล์ Excel</h2>
-    <form action="import_excel.php" method="POST" enctype="multipart/form-data">
-        <div class="mb-3">
-            <label for="file" class="form-label">เลือกไฟล์ Excel :</label>
-            <input type="file" class="form-control" name="excel_file" id="file" accept=".xls, .xlsx" required>
-        </div>
-        <button type="submit" class="btn btn-primary">นำเข้าข้อมูล</button>
-    </form>
-</div>-->
-        
-        <div id="row_risk_pic" class="row p-2 pt-0 row-cols-1 row-cols-md-3 g-4 mb-0"></div>
-    </div>
+   <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/webDNP/pages/10/01/1001.php')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const tableBody = document.querySelector('#data-table tbody');
+                    data.forEach(row => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${row.id}</td>
+                            <td>${row.head}</td>
+                            <td>${row.type_np}</td>
+                            <td>${row.park}</td>
+                            <td>${row.type_com}</td>
+                            <td>${row.year_np}</td>
+                            <td>${row.np_id}</td>
+                            <td>${row.brand_id}</td>
+                            <td>${row.cpu_id}</td>
+                            <td>${row.purpose}</td>
+                            <td>${row.status_np}</td>
+                        `;
+                        tableBody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script> -->
 
     <input type="hidden" name="hid_delete_pic" id="hid_delete_pic">
 </form>
-
 </div>
 </div>
 
@@ -228,7 +159,6 @@ function checkYear(input) {
 <span class="close">&times;</span>
 <img class="modal-content" id="img01">
 </div>
-
 
 <div id="card_risk_pic_add" class="card p-0 me-1 border-0" style="width: 100px;" hidden>
 <img class="rounded img_risk" />
@@ -238,7 +168,6 @@ function checkYear(input) {
 </div>
 </div>                    </div>
         <!-- / Content -->
-
         <!-- Footer -->
         <footer class="content-footer footer bg-footer-theme">
 <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -255,10 +184,8 @@ function checkYear(input) {
 </div>
 <!-- / Layout page -->
 </div>
-
 <!-- Overlay -->
 <div class="layout-overlay layout-menu-toggle"></div>
-
 
 <!-- Drag Target Area To SlideIn Menu On Small Screens -->
 <div class="drag-target"></div>
@@ -266,9 +193,6 @@ function checkYear(input) {
 </div>
 <!-- / Layout wrapper -->
 
-<form method="post" id="form_delete">
-<input type="hidden" name="hid_id_delete" id="hid_id_delete">
-</form>
 
 <!-- Modal -->
 <div class="modal fade" id="modalDelete" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
@@ -320,25 +244,16 @@ function checkYear(input) {
 </div>
 </div>
 
-
-<!-- Core JS -->
-    <!-- build:js -->
     <script src="/webDNP/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="/webDNP/assets/vendor/libs/popper/popper.js"></script>
     <script src="/webDNP/assets/vendor/js/bootstrap.js"></script>
     <script src="/webDNP/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
     <script src="/webDNP/assets/vendor/libs/typeahead-js/typeahead.js"></script>
-
     <script src="/webDNP/assets/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
     <script src="/webDNP/assets/vendor/libs/select2/select2.js"></script> 
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
     <script src="/webDNP/assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
-
     <script src="/webDNP/assets/vendor/libs/moment/moment.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables/jquery.dataTables.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
@@ -346,44 +261,77 @@ function checkYear(input) {
     <script src="/webDNP/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
     <script src="/webDNP/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
-
-    <!--<script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>-->
-    <!--<script src="/webDNP/assets/js/datepicker_config.js"></script>-->
-    <!-- Main JS -->
+    <script src="/webDNP/assets/vendor/libs/jquery-datetime-picker/jquery.datetimepicker.js"></script>
+    <script src="/webDNP/assets/js/datepicker_config.js"></script>
     <script src="/webDNP/assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <!--<script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>-->
-
-
+    <script src="/webDNP/assets/js/pages/menu_accident_risk.js"></script>
+    <!--<script src="/webDNP/pages/10/01/search.js"></script>-->
 
 <!--ช่องค้นหาใน รายชื่อต่างๆ-->
 <script>
-    function url_search(){
-        var search = $('.search').val();
-        var date_search = $('.date_search').val();
-        var url =  "?mode=list";
+// ฟังก์ชันเพื่อสร้าง URL สำหรับการค้นหา
+function url_search() {
+    var search = document.querySelector('.search').value;
+    var url = "/webDNP/pages/11/01/1001.php";
 
-        if(search !="" && search != undefined) url = url+ "&search=" + encodeURIComponent(search);
-        if(date_search !="" && date_search != undefined) url = url + "&date=" + encodeURIComponent(date_search);
-
-        return url;
+    if (search) {
+        url += "?search=" + encodeURIComponent(search);
     }
 
-    $(function() {
-        $('input[type=search]').keydown(function (event) {
-            if (event.which == 13) {
-                window.location = url_search();
-                event.preventDefault();
-            }
-        });
+    return url;
+}
 
-        var e = $(".select2");
-        e.length && e.each(function() {
+// ฟังก์ชันเพื่อแสดงข้อมูลในตาราง
+function renderTable(data) {
+    const tableBody = document.querySelector('#data-table tbody');
+    tableBody.innerHTML = '';  // ล้างข้อมูลเก่าออกจากตาราง
+
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${row.id}</td>
+            <td>${row.head}</td>
+            <td>${row.type_np}</td>
+            <td>${row.park}</td>
+            <td>${row.type_com}</td>
+            <td>${row.year_np}</td>
+            <td>${row.np_id}</td>
+            <td>${row.brand_id}</td>
+            <td>${row.cpu_id}</td>
+            <td>${row.purpose}</td>
+            <td>${row.status_np}</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+}
+
+// เมื่อหน้าเว็บโหลดเสร็จ
+document.addEventListener('DOMContentLoaded', function() {
+    fetch(url_search())  // เรียกฟังก์ชันเพื่อดึงข้อมูลทั้งหมดในตอนแรก
+        .then(response => response.json())
+        .then(data => {
+            renderTable(data);  // เรียกฟังก์ชันเพื่อแสดงข้อมูลในตาราง
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+// เมื่อผู้ใช้พิมพ์ในช่องค้นหา จะทำการค้นหาทันที
+document.querySelector('.search').addEventListener('input', function(event) {
+    fetch(url_search())  // เรียกข้อมูลใหม่ตามค่าที่กรอก
+        .then(response => response.json())
+        .then(data => {
+            renderTable(data);  // อัพเดตข้อมูลในตาราง
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+
+    $(function() {
+        $('.select2').each(function() {
             var e = $(this);
             e.wrap('<div class="position-relative"></div>'), e.select2({
                 dropdownParent: e.parent()
-            })
+            });
         });
     });
 
@@ -396,17 +344,15 @@ function checkYear(input) {
         });
     }
 
-    function modal_alert(title,text){
+    function modal_alert(title, text) {
         $("#modalAlert #modalTitle").html(title);
         $("#modalAlert #modalText").html(text);
         $("#modalAlert").modal('show');
     }
 </script>
 
-<script>
 
 
-</script>
 
 </body>
 
