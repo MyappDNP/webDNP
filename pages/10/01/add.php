@@ -36,7 +36,8 @@
     <script src="/webDNP/assets/js/template-customizer.js"></script>
     <script src="/webDNP/assets/js/config.js"></script>
 
-    <script src="/webDNP/pages/10/01/park.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 
 
 </head>
@@ -103,8 +104,17 @@
     <div class="mb-3 col-md-6">
     <label class="fw-bold">สำนักบริหารพื้นที่อนุรักษ์<small class="text-danger ms-1">*</small></label>
     <select id="head" name="head" class="select2 form-select">
-        <option value="">-- เลือกหน่วยงาน --</option>
+        <option value="">-- เลือกสำนักบริหารพื้นที่อนุรักษ์ --</option>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_head.php'; ?>
+    </select>
+</div>
+
+<div class="mb-3 col-md-6">
+    <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
+    <select id="park" name="park" class="select2 form-select">
+        <option value="">-- เลือกหน่วยงาน --</option>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/webDNP/select_park.php'; ?>
+        <!-- ตัวเลือกหน่วยงานจะถูกเพิ่มที่นี่ -->
     </select>
 </div>
 
@@ -118,13 +128,6 @@
     </select>
 </div>
 
-<div class="mb-3 col-md-6">
-    <label class="fw-bold">หน่วยงาน<small class="text-danger ms-1">*</small></label>
-    <select id="park" name="park" class="select2 form-select">
-        <option value="">-- เลือกหน่วยงาน --</option>
-        <!-- ตัวเลือกหน่วยงานจะถูกเพิ่มที่นี่ -->
-    </select>
-</div>
 
 
         <div></div>
