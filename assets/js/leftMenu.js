@@ -135,8 +135,8 @@ const layoutMenuHTML = `
                             ระบบงานเฝ้าระวังภัยคุกคามพื้นที่อุทยานแห่งชาติ
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-bar-chart-square"></i>ข้อมูลสถิตินักท่องเที่ยว</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-bus-school"></i>ข้อมูลสถิติยานพาหนะ</a></li>
+                            <li class="menu-item"><a href="/webDNP/pages/10/01" class="menu-link"><i class="menu-icon tf-icons bx bx-bar-chart-square"></i>ข้อมูลสถิตินักท่องเที่ยว</a></li>
+                            <li class="menu-item"><a href="/webDNP/pages/10/02" class="menu-link"><i class="menu-icon tf-icons bx bxs-bus-school"></i>ข้อมูลสถิติยานพาหนะ</a></li>
                             <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bx-braille"></i>ข้อมูลสถิติจุดความร้อนในพื้นที่อุทยานแห่งชาติ</a></li>
                             <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-flame"></i>ข้อมูลสถิติไฟป่าในพื้นที่อุทยานแห่งชาติ</a></li>
                             <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon tf-icons bx bxs-binoculars"></i>ข้อมูลช้างป่าในอุทยานแห่งชาติ</a></li>
