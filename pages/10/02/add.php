@@ -130,32 +130,53 @@
 <div class="mb-3 col-md-6">
             <label class="fw-bold">วันที่บันทึกข้อมูล<small class="text-danger ms-1">*</small></label>
             <div class="input-group input-group-merge">
-                <input class="form-control date" autocomplete="off" onkeypress="return false;" onkeyup="return false;" onkeydown="return false;" type="text" id="txt_riskreportdate" name="txt_riskreportdate" placeholder="วันที่เกิดอุบัติเหตุ/ภัยพิบัติ" value="">
+                <input class="form-control date" autocomplete="off" onkeypress="return false;" onkeyup="return false;" onkeydown="return false;" type="text" id="txt_riskreportdate" name="txt_riskreportdate" placeholder="วันที่" value="">
                 <span class="input-group-text cursor-pointer" onclick="document.getElementById('txt_riskreportdate').focus();"><i class="bx bx-calendar"></i></span>
             </div>
 </div>
 
-        <div></div>
+        <div><br></div>
 
-<div class="mb-3 col-md-6">
-    <label class="fw-bold">ปี พ.ศ. ที่ได้รับ<small class="text-danger ms-1">*</small></label>
-    <input class="form-control" type="text" id="year" name="year" placeholder="ปี พ.ศ." maxlength="4" oninput="checkYear(this)">
-    <div id="yearError" class="text-danger" style="display: none;">กรุณากรอกปี พ.ศ. ในรูปแบบ 25XX</div>
+        <div class="d-flex justify-content-between">
+    <h5 class="mb-0">นักท่องเที่ยวที่เก็บค่าบริการ</h5>
+    <h5 class="mb-0">นักท่องเที่ยวที่ไม่เก็บค่าบริการ</h5>
 </div>
 
-<script>
-function checkYear(input) {
-    const value = input.value;
-    // เช็คว่าเป็นปีที่เริ่มต้นด้วย 25 และตามด้วยเลข 2 หลัก
-    if (/^25\d{0,2}$/.test(value) || value === "") {
-        input.style.borderColor = ""; // Reset border color
-        document.getElementById("yearError").style.display = "none"; // Hide error message
-    } else {
-        input.style.borderColor = "red"; // Highlight invalid input
-        document.getElementById("yearError").style.display = "block"; // Show error message
-    }}
-</script>
+        <div><br></div>
 
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ไทย (เด็ก)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ไทย (เด็ก)" />
+        </div>
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ไทย (เด็ก)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ไทย (เด็ก)" />
+        </div>
+        <div></div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ไทย (ผู้ใหญ่)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ไทย (ผู้ใหญ่)" />
+        </div>
+        <div></div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">เอเชีย (เด็ก)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="เอเชีย (เด็ก)" />
+        </div>
+        <div></div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">เอเชีย (ผู้ใหญ่)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="เอเชีย (ผู้ใหญ่)" />
+        </div>
+        <div></div>
+
+        <div class="mb-3 col-md-6">
+            <label class="fw-bold">ยุโรปและอเมริกา (เด็ก)</label>
+            <input class="form-control" type="text" id="np_id" name="np_id" placeholder="ยุโรปและอเมริกา (เด็ก)" />
+        </div>
+        <div></div>
 
 <div class="mb-3 col-md-6">
             <label class="fw-bold">ประเภทครุภัณฑ์คอมพิวเตอร์<small class="text-danger ms-1">*</small></label>
